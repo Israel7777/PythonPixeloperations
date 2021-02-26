@@ -2,7 +2,7 @@
 from PIL import Image
 
 #method to find out black pixels 
-def to_countblackPixel():
+def to_countcolorPixel():
   
     #to open image , image to be placed in same directory as the code is placed 
     img = Image.open('[image name].[image format]')# ex : testimage.png
@@ -36,11 +36,11 @@ def to_countblackPixel():
         x = x + 1
         
     #print number of black pixels
-    print(countblack)
+    print(countcolor)
 
 #define main method
 def main():
-    to_countblackPixel()
+    to_countcolorPixel()
 
 #main method definition 
 if __name__ == "__main__":

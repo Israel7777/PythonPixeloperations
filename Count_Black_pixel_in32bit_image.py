@@ -8,7 +8,7 @@ def to_countblackPixel():
     img = Image.open('[image name].[image format]')# ex : testimage.png
     
     #list containing the RGB value of Black pixel
-    black24bitlist = [0,0,0,0]
+    black32bitlist = [0,0,0]
     
     #x = iteration variable  , countblack = count variable for black pixel initialized to zero
     x =countblack = 0
@@ -29,8 +29,10 @@ def to_countblackPixel():
             list1 = list(img.getpixel(coordinate))
             
             #comparing if the pixel is black
-            if list1 == black24bitlist:
-                countblack = countblack + 1
+            if list1[0] == black32bitlist[0]:
+                if list1[1] == black32bitlist[1]:
+                  if list1[2] == black32bitlist[2]:
+                        countblack = countblack + 1
                 
             y = y + 1
         x = x + 1
